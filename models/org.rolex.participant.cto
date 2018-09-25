@@ -1,8 +1,8 @@
 
 namespace org.rolex.participant
 
-import org.rolex.base.*
-
+import org.rolex.base.GENDER
+import org.rolex.base.Person
 
 participant Producter identified by producterID extends Person {
   o String producterID
@@ -27,8 +27,8 @@ participant Customer identified by customerID extends Person{
   o GENDER sexe
 }
 
-participant Reparer identified by reparerID extends Person{
-  o String reparerID
+participant Repairer identified by repairerID extends Person{
+  o String repairerID
   o String name 
 }
 

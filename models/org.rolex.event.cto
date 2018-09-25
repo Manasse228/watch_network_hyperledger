@@ -1,9 +1,9 @@
 
 namespace org.rolex.event
 
-import org.rolex.asset.*
+import org.rolex.asset.Material
 
-event PurchaseOrderMaterialNotification {
+event MaterialEvent {
   o String message
   --> Material material
 }

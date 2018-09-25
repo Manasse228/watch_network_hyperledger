@@ -9,6 +9,7 @@ import org.rolex.participant.Producter
 import org.rolex.participant.Retailer
 import org.rolex.participant.Customer
 import org.rolex.participant.MaterialSupplier
+import org.rolex.participant.Repairer
 
 asset Watch identified by certificat {
   o String certificat
@@ -20,6 +21,7 @@ asset Watch identified by certificat {
   o TYPE_PUBLIC typePublic
   o GENDER gender
   --> Material[] materials
+  --> Repairer[] repairers optional
   --> Producter factory
   --> PackWatch pack optional
   --> Retailer retailer optional

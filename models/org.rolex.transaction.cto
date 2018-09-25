@@ -1,9 +1,14 @@
 
 namespace org.rolex.transaction
 
-import org.rolex.asset.*
-import org.rolex.base.*
-import org.rolex.participant.*
+import org.rolex.asset.PackWatch
+import org.rolex.asset.Material
+import org.rolex.asset.Watch
+import org.rolex.participant.Producter
+import org.rolex.participant.Retailer
+import org.rolex.participant.Customer
+import org.rolex.participant.MaterialSupplier
+import org.rolex.participant.Repairer
 
 transaction PurchaseMaterialTransaction {
   --> MaterialSupplier seller
@@ -25,5 +30,12 @@ transaction TradeWatchTransaction {
   --> Customer newOwner
   --> Watch[] watchs
 }
+
+transaction TradeRepairWatchTransaction {
+  o String commentaire
+  --> Repairer repairer
+  --> Watch[] watchs
+}
+
 
 
