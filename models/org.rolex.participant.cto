@@ -1,0 +1,41 @@
+
+namespace org.rolex.participant
+
+import org.rolex.base.*
+
+
+participant Producter identified by producterID extends Person {
+  o String producterID
+  o String name
+}
+
+participant MaterialSupplier identified by materialSupplierID extends Person {
+  o String materialSupplierID
+  o String name
+}
+
+participant Retailer identified by retailerID extends Person{
+  o String retailerID
+  o String name
+}
+
+participant Customer identified by customerID extends Person{
+  o String customerID
+  o String firstName 
+  o String lastName 
+  o DateTime birthDate 
+  o GENDER sexe
+}
+
+participant Reparer identified by reparerID extends Person{
+  o String reparerID
+  o String name 
+}
+
+
+
+
+
+
+
+

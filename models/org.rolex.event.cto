@@ -1,0 +1,9 @@
+
+namespace org.rolex.event
+
+import org.rolex.asset.*
+
+event PurchaseOrderMaterialNotification {
+  o String message
+  --> Material material
+}

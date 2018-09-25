@@ -1,0 +1,43 @@
+
+namespace org.rolex.base
+
+
+enum STATE {
+  o PROGRESS
+  o DELIVER
+}
+
+enum GENDER {
+  o MAN
+  o WOMAN
+}
+
+enum MOUVEMENT {
+  o AUTOMATIQUE
+  o MANIUEL
+  o SEMI_AUTOMATIQUE
+}
+
+enum TYPE_PUBLIC {
+  o ADULT
+  o CHILD
+  o BUSINESS
+}
+
+abstract participant Person {
+  o ContactDetails contactDetails 
+}
+
+concept ContactDetails {
+  o String email  
+  o String phoneNumber 
+  o Address address 
+}
+
+concept Address {
+  o String city 
+  o String country 
+  o String region 
+  o String street 
+  o String postalCode 
+}

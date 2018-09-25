@@ -1,0 +1,40 @@
+
+
+namespace org.rolex.asset
+
+import org.rolex.base.MOUVEMENT
+import org.rolex.base.TYPE_PUBLIC
+import org.rolex.base.GENDER
+import org.rolex.participant.Producter
+import org.rolex.participant.Retailer
+import org.rolex.participant.Customer
+import org.rolex.participant.MaterialSupplier
+
+asset Watch identified by certificat {
+  o String certificat
+  o String marque
+  o String color
+  o Double price
+  o DateTime dateCreation
+  o MOUVEMENT mouvement
+  o TYPE_PUBLIC typePublic
+  o GENDER gender
+  --> Material[] materials
+  --> Producter factory
+  --> PackWatch pack optional
+  --> Retailer retailer optional
+  --> Customer owner optional
+}
+
+asset PackWatch identified by packID {
+  o String packID
+  --> Watch[] watchs
+}
+
+asset Material identified by materialID {
+  o String materialID
+  o String nom
+  o String details
+  --> MaterialSupplier provider
+  --> Producter used optional
+}
